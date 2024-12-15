@@ -21,10 +21,10 @@ export const CreateTaskForm: FC = (): ReactElement => {
 
             {/* {Stack component form MUI will help to give spacing between the components within.} */}
             <Stack sx={{ width: '100%' }} spacing={2}>
-                <TaskTitleField disabled/>
+                <TaskTitleField />
                 <TaskDescriptionField/>
 
-                <TaskDateField/>
+                <TaskDateField />
                 {/* Task Status and Priority*/}
             </Stack>
         </Box>
