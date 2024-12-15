@@ -2,6 +2,8 @@ import { Box, Typography, Stack } from '@mui/material';
 import { FC, ReactElement } from 'react';
 import { TaskTitleField } from './_taskTitleField';
 import { TaskDescriptionField } from './_taskDescriptionField';
+import { TaskDateField } from './_taskDateField';
+
 
 export const CreateTaskForm: FC = (): ReactElement => {
     return (
@@ -22,7 +24,7 @@ export const CreateTaskForm: FC = (): ReactElement => {
                 <TaskTitleField disabled/>
                 <TaskDescriptionField/>
 
-                {/* Task Date */}
+                <TaskDateField/>
                 {/* Task Status and Priority*/}
             </Stack>
         </Box>
