@@ -1,6 +1,6 @@
 import { FC,ReactElement } from 'react';
 import { Avatar, Box, Typography } from '@mui/material';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 //TypeScript way for prop checking:
 interface IProfile {
