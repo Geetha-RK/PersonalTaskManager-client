@@ -3,6 +3,7 @@ import { FC, ReactElement } from 'react';
 import { TaskTitleField } from './_taskTitleField';
 import { TaskDescriptionField } from './_taskDescriptionField';
 import { TaskDateField } from './_taskDateField';
+import { TaskSelectField } from './_taskSelectField';
 
 
 export const CreateTaskForm: FC = (): ReactElement => {
@@ -23,9 +24,14 @@ export const CreateTaskForm: FC = (): ReactElement => {
             <Stack sx={{ width: '100%' }} spacing={2}>
                 <TaskTitleField />
                 <TaskDescriptionField/>
-
                 <TaskDateField />
-                {/* Task Status and Priority*/}
+
+                {/* new stack to have the status and priority component in row */}
+                <Stack direction="row" spacing={2} sx={{ width: '100%' }}>
+                     <TaskSelectField/>
+                     <TaskSelectField/>
+                </Stack>
+                
             </Stack>
         </Box>
     );
