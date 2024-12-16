@@ -6,6 +6,8 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 //import interfaces:
 import { ISelectField } from './Interfaces/ISelectField';
+//to sent the values as props from react component using the typecheck of PropTypes
+import PropTypes from 'prop-types';
 
 export const TaskSelectField: FC<ISelectField> = (
     props,
@@ -38,4 +40,18 @@ export const TaskSelectField: FC<ISelectField> = (
             </Select>
         </FormControl>
     );
+}
+
+TaskSelectField.propTypes = {
+    onChange: PropTypes.func,
+    label: PropTypes.string,
+    name:PropTypes.string,
+    disabled:PropTypes.bool,
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            value:PropTypes.string.isRequired,
+            lable:PropTypes.string.isRequired,
+        }).isRequired,
+    ),
+
 }

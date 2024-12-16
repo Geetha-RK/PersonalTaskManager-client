@@ -4,6 +4,9 @@ import { TaskTitleField } from './_taskTitleField';
 import { TaskDescriptionField } from './_taskDescriptionField';
 import { TaskDateField } from './_taskDateField';
 import { TaskSelectField } from './_taskSelectField';
+//mport enums to pass the values as props to the components.
+import { Status } from './enums/Status';
+import { Priority } from './enums/Priority';
 
 
 export const CreateTaskForm: FC = (): ReactElement => {
@@ -28,8 +31,38 @@ export const CreateTaskForm: FC = (): ReactElement => {
 
                 {/* new stack to have the status and priority component in row */}
                 <Stack direction="row" spacing={2} sx={{ width: '100%' }}>
-                     <TaskSelectField/>
-                     <TaskSelectField/>
+                        <TaskSelectField 
+                            label="Status" 
+                            name="Status" 
+                            items={[
+                                {
+                                    value: Status.todo,
+                                    label: Status.todo.toUpperCase(),
+                                },
+                                {
+                                    value: Status.inProgress,
+                                    label: Status.inProgress.toUpperCase(),
+                                }
+                            ]}
+                        />
+                     <TaskSelectField
+                        label="Priority" 
+                        name="Priority" 
+                        items={[
+                            {
+                                value:Priority.low,
+                                label:Priority.low,
+                            },
+                            {
+                                value:Priority.normal,
+                                label:Priority.normal,
+                            },
+                            {
+                                value:Priority.high,
+                                label:Priority.high,
+                            },
+                        ]}
+                     />
                 </Stack>
                 
             </Stack>
