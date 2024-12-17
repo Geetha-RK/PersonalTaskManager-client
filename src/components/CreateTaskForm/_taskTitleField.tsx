@@ -16,7 +16,7 @@ export const TaskTitleField: FC<ITextField> = (
         <TextField
             id="title"
             label="Task Title"
-            placeholder="Task Title"
+            // placeholder="Task Title"
             variant="outlined"
             size="small"
             name="title"

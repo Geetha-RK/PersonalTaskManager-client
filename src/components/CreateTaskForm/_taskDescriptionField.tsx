@@ -14,7 +14,7 @@ export const TaskDescriptionField: FC<ITextField> = (
             id="description"
             name="description"
             label="Description"
-            placeholder='Description'
+            // placeholder='Description'
             variant="outlined"
             size="small"
             multiline
