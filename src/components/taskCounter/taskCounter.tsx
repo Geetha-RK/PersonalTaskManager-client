@@ -1,4 +1,4 @@
-import React, { FC,ReactElement } from 'react';
+import { FC,ReactElement } from 'react';
 import { Avatar, Box, Typography } from '@mui/material';
 import { ITaskCounter } from './interfaces/ITaskCounter';
 import { Status } from '../CreateTaskForm/enums/Status';
